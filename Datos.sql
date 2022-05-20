@@ -145,58 +145,58 @@ INSERT INTO Producto(tipoProId, fabricanteId, nombre, caract) VALUES
 
 DECLARE @venta1 NVARCHAR(MAX) = N'{
     "sillas" : [
-        {"id" : 1},
-        {"id" : 2},
-        {"id" : 3}
+        {"id" : 1, "cant": 1},
+        {"id" : 2, "cant": 1},
+        {"id" : 3, "cant": 1}
     ],
     "sofas" : [
-        {"id" : 11},
+        {"id" : 11, "cant": 1},
     ],
     "camas" : [
-        {"id" : 7},
+        {"id" : 7, "cant": 1},
     ]
 }';
 
 DECLARE @venta2 NVARCHAR(MAX) = N'{
     "sofas" : [
-        {"id" : 10},
+        {"id" : 10, "cant": 2},
     ],
     "comodas" : [
-        {"id" : 7},
+        {"id" : 7, "cant": 1},
     ]
 }';
 
 DECLARE @venta3 NVARCHAR(MAX) = N'{ 
     "sillas" : [
-        {"id" : 1},
+        {"id" : 1, "cant": 6},
     ],
 }';
 
 DECLARE @venta4 NVARCHAR(MAX) = N'{ 
     "escritorios" : [
-        {"id" : 5},
+        {"id" : 5, "cant": 1},
     ],
     "mesas" : [
-        {"id" : 3},
-        {"id" : 4},
+        {"id" : 3, "cant": 1},
+        {"id" : 4, "cant": 1},
     ]
 }';
 
 DECLARE @venta5 NVARCHAR(MAX) = N'{ 
     "camas" : [
-        {"id" : 8},
+        {"id" : 8, "cant": 3},
     ],
 }';
 
 DECLARE @venta6 NVARCHAR(MAX) = N'{ 
     "sillas" : [
-        {"id" : 3}
+        {"id" : 3, "cant": 4}
     ],
     "mesas" : [
-        {"id" : 4},
+        {"id" : 4, "cant": 1},
     ],
     "camas" : [
-        {"id" : 7},
+        {"id" : 7, "cant": 2},
     ]
 }';
 
