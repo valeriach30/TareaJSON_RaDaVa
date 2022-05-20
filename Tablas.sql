@@ -3,23 +3,26 @@ GO
 
 -- ELIMINAR
 
+IF OBJECT_ID('Empleados') IS NOT NULL
+	DROP TABLE Empleados;
+
+IF OBJECT_ID('TipoEmpleado') IS NOT NULL
+	DROP TABLE TipoEmpleado;
+
 IF OBJECT_ID('Cliente') IS NOT NULL
 	DROP TABLE Cliente;
 
 IF OBJECT_ID('Producto') IS NOT NULL
 	DROP TABLE Producto;
 
+IF OBJECT_ID('TipoProducto') IS NOT NULL
+	DROP TABLE TipoProducto;
+
 IF OBJECT_ID('Inventario') IS NOT NULL
 	DROP TABLE Inventario;
 
 IF OBJECT_ID('Ventas') IS NOT NULL
 	DROP TABLE Ventas;
-
-IF OBJECT_ID('TipoEmpleado') IS NOT NULL
-	DROP TABLE TipoEmpleado;
-
-IF OBJECT_ID('Empleados') IS NOT NULL
-	DROP TABLE Empleados;
 
 -------------------------------------------------------------
 
