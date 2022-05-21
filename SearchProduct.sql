@@ -4,12 +4,17 @@ CREATE PROCEDURE dbo.searchProduct
 @valor NVARCHAR(MAX)
 AS
 BEGIN
-	DECLARE @query NVARCHAR(MAX) = N'$.' + @caracteristica;
+	BEGIN TRY
+		DECLARE @query NVARCHAR(MAX) = N'$.' + @caracteristica;
 	
-	SELECT
-		nombre,
-		JSON_VALUE(caract, '$.precio') AS Precio 
-	FROM Producto WHERE JSON_VALUE(caract, @query) = @valor;		
+		SELECT
+			nombre,
+			JSON_VALUE(caract, '$.precio') AS Precio 
+		FROM Producto WHERE JSON_VALUE(caract, @query) = @valor;	
+	END TRY
+	BEGIN CATCH
+			PRINT 'Error al buscar producto';
+	END CATCH
 END
 	
 

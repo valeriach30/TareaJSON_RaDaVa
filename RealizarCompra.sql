@@ -8,10 +8,15 @@ CREATE PROCEDURE compra
 @empleadoID INT
 AS
 BEGIN
-	DECLARE @fecha DATE = GETDATE();
+	BEGIN TRY
+		DECLARE @fecha DATE = GETDATE();
 	
-	INSERT INTO Ventas(clienteId, productos, monto, fecha, empleadoId) 
-	VALUES (@clienteID, @productos, @monto, @fecha, @empleadoID);
+		INSERT INTO Ventas(clienteId, productos, monto, fecha, empleadoId) 
+		VALUES (@clienteID, @productos, @monto, @fecha, @empleadoID);
+	END TRY
+	BEGIN CATCH
+			PRINT 'Error al realizar compra';
+	END CATCH
 END
 
 

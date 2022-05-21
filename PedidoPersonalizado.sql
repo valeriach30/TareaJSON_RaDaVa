@@ -3,8 +3,13 @@ CREATE PROCEDURE pedidoPersonalizado
 @clienteID INT,
 @pedido NVARCHAR(MAX)
 AS BEGIN
-	INSERT INTO PedidosPersonalizados(clienteID, pedido)
-	VALUES (@clienteID, @pedido);
+	BEGIN TRY
+		INSERT INTO PedidosPersonalizados(clienteID, pedido)
+		VALUES (@clienteID, @pedido);
+	END TRY
+	BEGIN CATCH
+		PRINT 'Error al insertar pedido personalizado';
+	END CATCH
 END
 
 -- Ejemplo
