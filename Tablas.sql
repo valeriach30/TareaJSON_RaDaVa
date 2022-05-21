@@ -80,3 +80,10 @@ CREATE TABLE Inventario(
 	cantidad INT, 
 	FOREIGN KEY (productoId) REFERENCES Producto(productoId)
 );
+
+CREATE TABLE PedidosPersonalizados(
+	pedidoID INT PRIMARY KEY IDENTITY(1,1),
+	clienteID INT,
+	pedido NVARCHAR(MAX), -- JSON
+	FOREIGN KEY (clienteID) REFERENCES Cliente(clienteId)
+);

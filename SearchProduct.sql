@@ -12,6 +12,8 @@ BEGIN
 	FROM Producto WHERE JSON_VALUE(caract, @query) = @valor;		
 END
 	
+
+-- Ejemplo
 DECLARE @inCaract NVARCHAR(MAX) = 'material', @inValue NVARCHAR(MAX) = 'madera';
 
 EXEC searchProduct
