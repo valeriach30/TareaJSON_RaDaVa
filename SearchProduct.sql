@@ -1,5 +1,5 @@
 -- Buscar un producto por caracacteristica 
-CREATE PROCEDURE dbo.searchProduct
+CREATE or ALTER PROCEDURE dbo.searchProduct
 @caracteristica NVARCHAR(MAX),
 @valor NVARCHAR(MAX)
 AS
@@ -24,3 +24,4 @@ DECLARE @inCaract NVARCHAR(MAX) = 'material', @inValue NVARCHAR(MAX) = 'madera';
 EXEC searchProduct
 	@caracteristica = @inCaract,
 	@valor = @inValue;
+

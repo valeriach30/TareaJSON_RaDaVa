@@ -32,7 +32,7 @@ INSERT INTO Cliente(nombre, apellidos, correo) VALUES
 	('Roberto', 'Carazo', 'roberCar@gmail.com'),
 	('Paula', 'Madrigal', 'pauMad@gmail.com'),
 	('Ana', 'Esquivel', 'anaE@gmail.com'),
-	('Belén', 'Alvarado', 'belenAlv@gmail.com'),
+	('Belï¿½n', 'Alvarado', 'belenAlv@gmail.com'),
 	('Santiago', 'Acosta', 'santiacos@gmail.com'),
 	('Sebastian', 'Montero', 'sebasmont@gmail.com'),
 	('Gabriel', 'Varela', 'gabrvare@gmail.com');
@@ -45,9 +45,9 @@ INSERT INTO TipoProducto(descripcion) VALUES
 	('Silla'),
 	('Mesa'),
 	('Escritorio'),
-	('Cómoda'),
+	('Cï¿½moda'),
 	('Cama'),
-	('Sofá');
+	('Sofï¿½');
 
 -- SELECT * FROM TipoProducto
 
@@ -224,4 +224,4 @@ INSERT INTO Inventario(productoId, cantidad) VALUES
 	(10, 14),
 	(11, 12);
 
--- SELECT * FROM Inventario
+-- SELECT * FROM Inventariosss
